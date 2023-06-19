@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 const require = createRequire(import.meta.url)
 const pkg = require('vitepress/package.json')
 
-export default defineConfig({
+const config = defineConfig(() => ({
   lang: 'en-US',
   title: 'VitePress',
   description: 'Vite & Vue powered static site generator.',
@@ -61,7 +61,7 @@ export default defineConfig({
       placement: 'vuejsorg'
     }
   }
-})
+}))
 
 function nav() {
   return [
